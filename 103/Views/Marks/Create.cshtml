@@ -1,0 +1,54 @@
+﻿@model _103.DTO.MarkList
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+
+<h1>Create</h1>
+
+<h4>Marks</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Mark" class="control-label"></label>
+                <input asp-for="Mark" class="form-control" />
+                <span asp-validation-for="Mark" class="text-danger"></span>
+                @Html.ValidationMessage("marks", "", new { style = "color: red;" })
+            </div>
+            <div class="form-group">
+                <label class="control-label">Unit Name</label> @* //！！！！！ *@
+                <select asp-for="UnitID" class="form-control" asp-items="ViewBag.UnitID" ></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Student Name</label> @* //！！！！！ *@
+                <select asp-for="StudentID" class="form-control" asp-items="ViewBag.StudentID" onchange="GetStudentUnitAvailable(this)"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+<script>
+    function GetStudentUnitAvailable(object) {
+        var value = object.value;
+        url = "/Marks/Create?id=" + value;
+        window.location.href = url;
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

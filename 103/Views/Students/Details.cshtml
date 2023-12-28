@@ -1,0 +1,62 @@
+﻿@model _103.DTO.StudentList
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentEmail)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StudentEmail)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.StudentID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Mark
+            </th>
+            <th>
+               Grade
+            </th>
+            <th>
+               Unit Name
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.marks)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mark)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitName)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

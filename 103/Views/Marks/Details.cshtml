@@ -1,0 +1,55 @@
+﻿@model _103.DTO.MarkList
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Marks</h4>
+    <hr />
+    <dl class="row">
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Mark)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Mark)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UnitID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UnitID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.UnitName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UnitName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StudentID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.StudentName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.StudentName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MarkID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

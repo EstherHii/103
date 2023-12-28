@@ -1,0 +1,104 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>_103</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTO\UniyClass.cs" />
+    <Compile Remove="Models\Data\ISoftDelete.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="SPMigration\dbo.AddNewMarks.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.AddNewStudent.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.AddNewTeacher.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.AddNewUnit.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.CheckEmailDuplicate.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.DeleteMarksByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.DeleteStudentByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.DeleteTeacherByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.DeleteUnitByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetMarkList.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetMarkPagination.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetMarksByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetStudentByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetStudentList.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetStudentPagination.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetStudentResultByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetStudentUnitAvailable.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetTeacherByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetTeacherList.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetTeacherPagination.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetTotalMark.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetTotalStudent.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetTotalTeacher.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetTotalUnit.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetUnitByID.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetUnitExist.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetUnitFail.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetUnitFailEdit.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetUnitList.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.GetUnitPagination.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.UpdateMarks.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.UpdateStudent.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.UpdateTeacher.StoredProcedure.sql" />
+    <None Remove="SPMigration\dbo.UpdateUnit.StoredProcedure.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="SPMigration\dbo.AddNewMarks.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.AddNewStudent.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.AddNewTeacher.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.AddNewUnit.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.CheckEmailDuplicate.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.DeleteMarksByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.DeleteStudentByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.DeleteTeacherByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.DeleteUnitByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetMarkList.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetMarkPagination.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetMarksByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetStudentByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetStudentList.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetStudentPagination.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetStudentResultByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetStudentUnitAvailable.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetTeacherByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetTeacherList.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetTeacherPagination.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetTotalMark.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetTotalStudent.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetTotalTeacher.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetTotalUnit.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetUnitByID.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetUnitExist.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetUnitFail.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetUnitFailEdit.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetUnitList.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.GetUnitPagination.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.UpdateMarks.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.UpdateStudent.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.UpdateTeacher.StoredProcedure.sql" />
+    <EmbeddedResource Include="SPMigration\dbo.UpdateUnit.StoredProcedure.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.1.24" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlserver" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.11" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<_103.DTO.MarkList>
+
+@{
+    ViewData["Title"] = "Index";
+    var paginatedMark = ViewBag.paginatedMark;
+    int pageNumber = ViewBag.pageNumber;
+    int pageSize = ViewBag.PageSize;
+    int totalPages = ViewBag.TotalPages;
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mark)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mark)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Grade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MarkID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MarkID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MarkID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Pagination links -->
+@for (int i = 1; i <= totalPages; i++)
+{
+    <a href="@Url.Action("Index", new {pageNumber = i})">@i</a>
+}

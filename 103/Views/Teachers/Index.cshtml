@@ -1,0 +1,52 @@
+﻿@model IEnumerable<_103.Models.Teacher>
+
+@{
+    ViewData["Title"] = "Index";
+    var paginatedTeachers = ViewBag.paginatedTeachers;
+    int pageNumber = ViewBag.pageNumber;
+    int pageSize = ViewBag.PageSize;
+    int totalPages = ViewBag.TotalPages;
+}
+    
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TeacherID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeacherName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeacherID)
+             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeacherName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TeacherID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TeacherID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TeacherID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<!-- Pagination links -->
+@for (int i = 1; i <= totalPages; i++)
+{
+    <a href="@Url.Action("Index", new {pageNumber = i})">@i</a>
+}
